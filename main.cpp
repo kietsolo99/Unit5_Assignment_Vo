@@ -1,5 +1,8 @@
 //starter code
 
+#include <cctype>
+#include <cstring>
+#include <cstdio>
 #include <iostream>
 #include <string> //array of characters, array is list of information same data type.
 #include<locale> //to use toupper() transform char
@@ -10,12 +13,23 @@ double weeklyPay(double, double,string,int);// function prototype
 
 int main( )
 {    
+  char str[] = "TCC-TR IS COOL";
+  cout << "The lowercase version of \"" << str << "\" is " << endl;
+  for (int i=0; i<strlen(str); i++)
+  putchar(tolower(str[i]));  
+  char str1[] = "i will succeed at c++";
+  cout << "\nThe uppercase version of \"" << str1 << "\" is " << endl;
+  for (int i=0; i<strlen(str1); i++)
+  putchar(toupper(str1[i]));    
          //a function call for each person - no input from the console for part 1
          cout << fixed << setprecision(2); 
          cout << weeklyPay (47.0, 505.75,"you",1) << endl;
          cout << weeklyPay (15.0, 65.25,"Susan",2) << endl;
          cout << weeklyPay (32.5, 100.25,"Tyson",1) << endl;
-            
+         cout << weeklyPay (45.0, 55.25, "Melvin",1) << endl;
+         cout << weeklyPay (41.0, 17.5, "Mika",1) << endl;
+         cout << weeklyPay (25.0, 15.0, "Elridge",2) << endl;
+         cout << weeklyPay (55.0, 203.50, "Freedom",1) << endl; 
   return 0;
 }
 
